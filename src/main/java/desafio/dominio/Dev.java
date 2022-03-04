@@ -20,7 +20,7 @@ public class Dev {
         bootcamp.getDevsInscritos().add(this);
     }
 
-    public void progrdir() {
+    public void progredir() {
         Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();
 
         if (conteudo.isPresent()) {
