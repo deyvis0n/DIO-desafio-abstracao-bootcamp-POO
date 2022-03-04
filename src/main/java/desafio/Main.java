@@ -1,5 +1,6 @@
 package desafio;
 
+import desafio.dominio.Bootcamp;
 import desafio.dominio.Curso;
 import desafio.dominio.Mentoria;
 
