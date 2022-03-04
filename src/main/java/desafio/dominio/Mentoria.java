@@ -1,13 +1,19 @@
 package desafio.dominio;
 
-import lombok.Data;
-
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import java.time.LocalDate;
 
-@Data
-public class Mentoria {
-    String titulo;
-    String descricao;
+@Getter
+@Setter
+@ToString(callSuper = true)
+public class Mentoria extends Conteudo {
+
     LocalDate data;
 
+    @Override
+    public double calcularXp() {
+        return XP_PADRAO + 20d;
+    }
 }

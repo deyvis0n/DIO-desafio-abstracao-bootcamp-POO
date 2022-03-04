@@ -1,11 +1,19 @@
 package desafio.dominio;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
-public class Curso {
-    private String titulo;
-    private String descicao;
+@Getter
+@Setter
+@ToString(callSuper = true)
+public class Curso extends Conteudo {
+
     private int cargaHoraria;
 
+
+    @Override
+    public double calcularXp() {
+        return XP_PADRAO * cargaHoraria;
+    }
 }
